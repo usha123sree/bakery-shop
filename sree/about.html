@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible"content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <title>About us section design</title> 
+ <style>
+   .img{
+        width:100%;
+        height:30%;
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap:40px;
+    
+  }
+  .rating {
+width: 265px;
+padding: 10px;
+background: rgb(255, 255, 255);
+margin: 200px auto 0;
+position: relative;
+direction: rtl;
+}
+.rating .emo {
+position: absolute;
+font-family: FontAwesome;
+color: #db1010;
+font-size: 100px;
+bottom: 150%;
+left: 50%;
+transform: translateX(-50%);
+display: inline-block;
+}
+.rating .emo:after {
+content: '\f119';
+}
+.rating input {
+position: absolute;
+width: 35px;
+height: 50px;
+cursor: pointer;
+transform: translateX(52px);
+opacity: 0;
+z-index: 5;
+}
+.rating input:nth-of-type(4):checked ~ .emo:after, .rating input:nth-of-type(4):hover ~ .emo:after, .rating input:nth-of-type(3):checked ~ .emo:after, .rating input:nth-of-type(3):hover ~ .emo:after {
+content: '\f11a';
+}
+.rating input:nth-of-type(1):checked ~ .emo:after, .rating input:nth-of-type(1):hover ~ .emo:after, .rating input:nth-of-type(2):checked ~ .emo:after, .rating input:nth-of-type(2):hover ~ .emo:after {
+content: '\f118';
+}
+.rating input:nth-of-type(1) {
+right: 50px;
+}
+.rating input:nth-of-type(2) {
+right: 100px;
+}
+.rating input:nth-of-type(3) {
+right: 150px;
+}
+.rating input:nth-of-type(4) {
+right: 200px;
+}
+.rating input:nth-of-type(5) {
+right: 250px;
+}
+.rating input:nth-of-type(6) {
+right: 300px;
+}
+.rating input:checked ~ .star:after, .rating input:hover ~ .star:after {
+content: '\f005';
+}
+.rating .star {
+display: inline-block;
+font-family: FontAwesome;
+font-size: 42px;
+color: #FBB202;
+cursor: pointer;
+margin: 3px;
+}
+.rating .star:after {
+content: '\f006';
+}
+.rating .star:hover ~ .star:after, .rating .star:hover:after {
+content: '\f005';
+}
+.footer{
+  background-color: bisque;
+}
+
+ </style>
+</head>
+<body bgcolor="white">
+  <section class="about">
+   <div class="main">
+    <div class="about-text">
+      <h1>About us</h1>
+      <h2>online bakery managment</h2>
+       <h3><i>our bakery is about to establishment that produces and sells flour-based food baked in an ovensuch as bread, cookies,cakes,serving retail bakeries are also categorized as cafes ,
+             serving  to the customers who wish to consume goods on the premises.</i></h3>
+    </div>
+   </div>
+   <div>
+    <h2 ><i class="fa fa-clock"></i>Open Hours</h2>
+    <ul>
+        <li><span>Monday</span><span>9:00 - 24:00 </span></li>
+        <li ><span>Tuesday</span><span>9:00 - 24:00</span></li>
+        <li><span>Wednesday</span><span>9:00 - 24:00</span></li>
+        <li ><span>Thursday</span><span>9:00 - 24:00</span></li>
+        <li><span>Friday</span><span>9:00 - 24:00</span></li>
+        <li><span>Saturday</span><span>9:00 - 24:00</span></li>
+        <li><span>Sunday</span><span> 9:00 - 24:00</span></li>
+    </ul>
+    <p>Here your bakery items will delivered with online </p>
+    <p>we provide bakery items</p>
+    <div>
+      <h1>Different cakes are available in bakery</i></h1>
+    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\black forest cake.jpg"width="300" hegith="300">
+    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\butter scotch.jpg"width="300" hegith="300">
+    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\choclate cake.jpg"width="300" hegith="300">
+    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\venala.jpg"width="300" hegith="200">
+    </div>
+    <h1>Different puffs are available in bakery</h1>
+    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\egg puff.jpeg"width="300" hegith="300">
+    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\masala puff.jpeg"width="300" hegith="300">
+    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\mini veg puff.jpeg"width="300" hegith="300">
+    </div>
+    <h1>Different pizza are available in bakery</h1>
+    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\palak panneer pizza.jpeg"width="300" hegith="300">
+    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\spcl Tromandous pizza.jpeg"width="300" hegith="300">
+    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\veg paradise.jpg"width="300" hegith="300">
+    </div>
+</div>
+<h2 align="center">Rate the stars </h2>
+<div class="rating">
+  <input type="radio" name="star"/><span class="star"> </span>
+  <input type="radio" name="star"/><span class="star"> </span>
+  <input type="radio" name="star"/><span class="star"> </span>
+  <input type="radio" name="star"/><span class="star"> </span>
+  <input type="radio" name="star"/><span class="star"> </span>
+  <span class="emo"> </span>
+</div>
+  </section>
+  <footer align="center" ><h1>thank you and visit again
+    <p>customer care center</p> <i class="fa fa-phone" style="color:black">111-222-333-444</i></h1>
+    <h2>Address:near GPT college,korapadu road,proddutur,kadapa</h2>
+  </footer>
+</body>
+</html>

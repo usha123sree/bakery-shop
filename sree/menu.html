@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible"content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>bakery shop</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+        <style>
+            .navbar{
+                position: fixed;
+            }
+            img{
+                width: 300px;
+                height: 300px;
+            }
+            .item{
+        max-width: 600px;
+        margin:auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:2rem;
+    }
+    .data{
+    padding-top: 10%;
+
+    }
+    .products{
+        width:100%;
+        height:30%;
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap:40px;
+    }
+    .product{
+     width: 350px;
+     height:90%;
+     box-shadow: 0 5px 20px rgba(23, 23, 23, 0.896);
+     display: flex;
+     flex-direction:column;
+     justify-content:center;
+     padding: 10px 20px 30px;
+     border-radius: 10px;
+     transition: .3s;
+
+    }
+    button{
+       
+        background-color: rgb(115, 233, 11);
+    }
+    button:hover{
+       
+       background-color: rgb(20, 206, 200);
+   }
+   .cart{
+    padding-top:5%;
+    position: fixed;
+    padding-bottom: 50px;
+    display:inline-block;
+   justify-content: end;
+        gap:40px;
+   }
+   .name{
+    display:inline-block;
+   justify-content: end;
+        gap:40px;
+   }
+   #round{
+  border-radius: 10px;
+  border: 2px solid #f25f0a;
+  padding-left: 14px;
+  padding-left: 50px;
+  padding-bottom: 14px; 
+  width: 150px;
+  height: 2px;
+   }
+ </style>
+    
+    </head>
+    <body>
+        <div class="main">
+            <div class="navbar">
+                <div class="icon">
+                    <h2 class="logo"><i class="fa fa-birthday-cake">Bakeryshop</i></h2>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="C:\Users\arava\OneDrive\Desktop\sree\home.html"><i class="fa fa-home" style="color:orange">HOME</i></a></li>
+                        <li><a href="C:\Users\arava\OneDrive\Desktop\sree\google.html"><i class="fa fa-tasks"style="color:orange">Profile</i></a></li>
+                        <li><a href="C:\Users\arava\OneDrive\Desktop\sree\about.html"><i class="fa fa-user"style="color:orange">SERVICE</i></a></li>
+                        <li><a href="C:\Users\arava\OneDrive\Desktop\sree\menu.html"><i class="fa fa-bars"style="color:orange">MENU</i></a></li>
+                    </ul>
+                </div>     
+                <div class="search">
+                    <input class="srch" id="search-item"type="search" name="" placeholder="Type To text" onkeyup="search()">
+                    <a href="#"> <button class="btn">Search</button></a>
+                </div>
+            </div>
+            <div class="medium-4  columns">
+                <div class="cart">
+                    <h1>Cart items</h1>
+                    <div class="row">
+                        <div class="medium-6 columns">
+                            <button class="tiny secondary" id="clear">Clear the cart</button>
+                        </div>
+                        <div class="medium-6 columns">
+                            <button class="tiny disabled" title="Work in progress"><a href="C:\Users\arava\OneDrive\Desktop\sree\checkout.html">Checkout</a></button>
+                        </div>
+                    </div>
+                    <div id="cartItems"><a href="">Loading cart...</a></div>
+                    Total price: <strong id="totalPrice">0 $</strong>
+                </div>
+            </div>
+        <div class="medium-8columns">
+            <h1 >menu  items </h1>
+            <div align="center" width="100%">
+                <div class="name">
+                <button style="gap: 40px;"><h1><a href="C:\Users\arava\OneDrive\Desktop\sree\menu.html">All</a></h1></button>
+                <button style="gap: 40px;"><h1><a href="C:\Users\arava\OneDrive\Desktop\sree\cake.html">cakes</a></h1></button>
+                    <button style="gap: 40px;" ><h1><a href="C:\Users\arava\OneDrive\Desktop\sree\pizza.html">pizza</a></h1></button></div></div>
+                <div class="products">
+            <div class="item">
+                <div class="data">
+                    <h1>CAKES</h1>
+                    <div class="product medium-4 columns" data-name="black forest cake" data-price="500" data-id="0">
+                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\black forest cake.jpg"align="center"alt ="black forest cake" />
+                        <h3 align="left">black forest cake</h3>
+                        <p>Black forest cake is a choclate sponge cake with a rich cherry filling .It consist of several layers of sponge cake sandwiched with whipped cream and cherry</p>
+                        <p id="round"> 1KG=500/-</p>
+                       Qty <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                    </div>
+                </div>
+                <div class="data">
+                    <div class="product medium-4 columns" data-name="butter scotch" data-price="300" data-id="1">
+                        <img src="C:\Users\arava\OneDrive\Desktop\sree\img\butter scotch.jpg"width="300"hegith="300" alt="butter scotch" />
+                        <h3>butter scotch cake</h3>
+                        <p> Butter scotch cake is The rich, buttery, sweet flavor of butterscotch shines</p>
+                        <p id="round">1KG=300/-</p>
+                        Qty  <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                    </div>
+                </div>
+                <div class="data">
+                    <div class="product medium-4 columns" data-name="choclate cake" data-price="400" data-id="2">
+                        <img src="C:\Users\arava\OneDrive\Desktop\sree\img\choclate cake.jpg"width="300"hegith="300" alt="black cake"/>
+                        <h3>Black cake</h3>
+                        <p>choclate cake is flavoured with melted choclated cake,cocoa are both </p>
+                        <p id="round">1KG=400/-</p>
+                        Qty   <input type="text" class="count" value="2">
+                        <button class="tiny">Add to cart</button>
+                    </div>    
+                    </div>
+                    <div class="data">
+                    <div class="product medium-4 columns" data-name="egg less white forest cake" data-price="500" data-id="3">
+                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\download (1).jpeg"width="300" height="300"
+                   alt ="egg less white forest cake" />
+                        <h3> Egg less white forest cake</h3>
+                        <P>eggless white forest cake is a soft and moist vanela flavoured sponge cake frosted with white wipped cream</P>
+                        <p id="round">1KG=500/-</p>
+                        Qty  <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                    </div>
+                    </div>
+                    <div class="data">
+                    <div class="product medium-4 columns" data-name="pine apple cake" data-price="300" data-id="4">
+                        <img src="C:\Users\arava\OneDrive\Desktop\sree\img\pineapple.jpg" width="300" hegith="300"alt="pine apple cake" />
+                        <h3>Pine apple cake</h3>
+                        <p>Pine apple cake recipe is made for scratch with crushed pineapple top with whipped cream light</p>
+                        <p id="round">1KG=300/-</p>
+                        Qty  <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                    </div>
+                    </div>
+                    <div class="data">
+                    <div class="product medium-4 columns" data-name="venala cake" data-price="450" data-id="5">
+                        <img src="C:\Users\arava\OneDrive\Desktop\sree\img\venala.jpg" width="300" height="300" alt="venala cake" />
+                        <h3>venala cake</h3>
+                        <p>vebala cakes made with,custard flavour by including egg yolks  </p>
+                        <p id="round">1KG=350/-</p>
+                        Qty  <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                    </div>   
+                    </div>
+                    <div class="data">
+                    <div class="product medium-4 columns" data-name="fruit cake" data-price="400" data-id="6">
+                        <img src= "C:\Users\arava\OneDrive\Desktop\sree\img\fruit cake.jpg"width="300" height="300" alt="fruit cake" />
+                        <h3>fruit cake</h3>
+                        <p>fruits cake is made with dry fruits ,nuts and optionally soaked in spirits</p>
+                        <p id="round">1KG=400/-</p>
+                        Qty  <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                    </div>
+                </div>
+                <div class="data">
+                    <div class="product medium-4 columns" data-name="kit-kat cake" data-price="650" data-id="7">
+                        <img src="C:\Users\arava\OneDrive\Desktop\sree\img\kit-kat gems cake.jpg" width="300" height="300" alt="kit-kat cake" />
+                        <h3>kit-kat cake</h3>
+                        <p>Kit-kat cake is choclate bar made from wafers</p>
+                        <p id="round">1KG=650/-</p>
+                        Qty <input type="text" class="count" value="1"/> 
+                        <button class="tiny">Add to cart</button>
+                    </div>  
+                    </div>
+                    <div class="data">
+                    <div class="product medium-4 columns" data-name="mango cake" data-price="350" data-id="8">
+                        <img src="C:\Users\arava\OneDrive\Desktop\sree\img\mango smiley-cake.jpg" width="300" hegith="300"alt="mango cake" />
+                        <h3>Mango cake</h3>
+                        <p>mango cake is with mango mousse forasting is a prefect sweet to make in a mango season </p>
+                        <p id="round"> 1KG=350/-</p>
+                        Qty <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                    </div> 
+                    </div>
+                    <div></div>
+                    <div class="data">
+                        <h1>PIZZAS</h1>
+                <div class="product medium-4 columns" data-name="tomato pizza" data-price="200" data-id="9">
+                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\creamy tomato pizza.jpg" width="300" hegith="300" 
+                alt="tomato pizza" />
+                    <h3>Tomato pizza</h3>
+                    <p>This pizza top with tomato sauce will provide you many essential nutrients</p>
+                    <p id="round">1plate=200/-</p>
+                    Qty  <input type="text" class="count" value="1" />
+                    <button class="tiny">Add to cart</button>
+                </div> 
+                </div>
+                <div class="product medium-4 columns" data-name="double cheese pizza" data-price="350" data-id="10">
+                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\double cheese.jpg"width="300" hegith="300"   alt="double cheese pizza" />
+                    <h3>double cheese pizza</h3>
+                    <p>This pizza is a basic meal with just tomato sauce topped with cheese</p>
+                    <p id="round">1plate=350/-</p>
+                    Qty <input type="text" class="count" value="1" />
+                    <button class="tiny">Add to cart</button>
+                </div>
+                <div class="data">
+                <div class="product medium-4 columns" data-name="onion pizza" data-price="150" data-id="11">
+                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\pyaza.jpg" width="300" hegith="300" ;
+                alt="onion pizza" />
+                    <h3>onion pizaa</picture></h3>
+                    <p>This pizza is a basic meal with just tomato sauce topped with cheese and onions</p>
+                    <p id="round">1plate=150/-</p>
+                    Qty <input type="text" class="count" value="1" />
+                    <button class="tiny">Add to cart</button>
+                </div>
+                </div>
+                <div class="data">
+                <div class="product medium-4 columns" data-name="grill" data-price="190" data-id="12">
+                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\grill.jpeg" width="300" hegith="300" ;
+                alt="grill" />
+                    <h3>veg grill</h3>
+                    <p>The veg grill  spread pizza crust with garlic and sprinkle </p>
+                    <p id="round">1plate=190/-</p>
+                    Qty <input type="text" class="count" value="1" />
+                    <button class="tiny">Add to cart</button>
+                </div>
+                </div>
+                <div class="data">
+                <div class="product medium-4 columns" data-name="indi tandoori paneer pizza" data-price="350" data-id="13">
+                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\indi tandoori paneer pizza.jpg" width="300" hegith="300" ;
+                alt="indi tandoori paneer pizza" />
+                    <h3> indiTandoori paneer pizza</h3>
+                    <P>indiTandoori paneer pizza & peppy panner combo,capsicum</P>
+                    <p id="round">1plate=350/-</p>
+                    Qty <input type="text" class="count" value="1" />
+                    <button class="tiny">Add to cart</button>
+                </div> 
+                </div>
+                <div class="data">
+                <div class="product medium-4 columns" data-name="Italian veg pizza" data-price="380" data-id="14">
+                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\Italian veg pizza.jpeg" width="300" hegith="300" ;
+                alt="Italian veg pizza" />
+                    <h3>italian veg pizza</h3>
+                    <p>Spread pizza sauce over hot crust.Top with cooked vegetables, mushrooms and olives</p>
+                    <p id="round">1plate=380/-</p>
+                    Qty   <input type="text" class="count" value="1" />
+                    <button class="tiny">Add to cart</button>
+                </div>
+                </div>
+                <div class="data">
+                <div class="product medium-4 columns" data-name="spcl Tromandous pizza" data-price="380" data-id="15">
+                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\spcl Tromandous pizza.jpeg" width="300" hegith="300" ;
+                alt="spcl Tromandousn veg pizza" />
+                    <h3>spcl Tromandousn veg pizza</h3>
+                    <p> the special Tromandousn veg pizza is made with top tamato sauce, onions,vegetables and spicy </p>
+                    <p id="round">1plate=380/-</p>
+                    Qty  <input type="text" class="count" value="1" />
+                    <button class="tiny">Add to cart</button>
+                </div>
+                </div> 
+                <div></div>
+                <div class="data"> 
+                    <h1>PUFFS</h1>
+                <div class="product medium-4 columns" data-name="egg puff" data-price="20" data-id="16">
+                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\egg puff.jpeg" width="300" hegith="300" ;
+                alt="egg puff " />
+                    <h3>Egg puff</h3>
+                    <p>The egg puff is usaullya flaky,crunchy pastry ,stuffed with unmentionable looking vegiterian things</p>
+                    <p id="round">1 piece20/-</p>
+                    Qty  <input type="text" class="count" value="1" />
+                    <button class="tiny">Add to cart</button>
+                </div>  
+                </div>
+                <div class="data">
+                <div class="product medium-4 columns" data-name="Banana puff" data-price="20" data-id="17">
+                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\Banana puff.jpeg" width="300" hegith="300" ;
+                alt="Banana puff " />
+                    <h3>Banana puff</h3>
+                    <p>Banana puff is asoft and slightly chewy banana and banana puff is made with banana slices</p>
+                    <p id="round"> 1 piece=20/-</p>
+                    Qty  <input type="text" class="count" value="1" />
+                    <button class="tiny">Add to cart</button>
+                </div>  
+                </div>
+                <div class="data">
+                <div class="product medium-4 columns" data-name="masala puff" data-price="25" data-id="18">
+                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\masala puff.jpeg" width="300" hegith="300" ;
+                alt="masala puff " />
+                    <h3>Masala puff</h3>
+                    <p>Masala puff is flakey,buttery pastry sheets envelope vegetables spiced with indian masalas</p>
+                    <p id="round">1 piece=25/-</p>
+                    Qty  <input type="text" class="count" value="1" />
+                    <button class="tiny">Add to cart</button>
+                </div> 
+                </div>  
+                <div class="data">
+                <div class="product medium-4 columns" data-name="mini veg puff" data-price="15" data-id="19">
+                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\mini veg puff.jpeg" width="300" hegith="300" ;
+                alt="mini veg puff " />
+                    <h3>Mini veg puff</h3>
+                    <P>Mini veg puff or bites or curry puff are cripsy &flaky on outside with yummy vegiterian filling </P>
+                    <p id="round">1 piece=15/--</p>
+                    Qty  <input type="text" class="count" value="1" />
+                    <button class="tiny">Add to cart</button>
+                </div>
+                </div>  
+                <div class="data">
+                <div class="product medium-4 columns" data-name="mushroom puff" data-price="30" data-id="20">
+                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\mushroom puff.jpeg" width="300" hegith="300" ;
+                alt="mushroom puff " />
+                    <h3>Mushroom puff</h3>
+                    <p>Mushroom puff are a quick and easy appetizer and they are made with mushrooms</p>
+                    <p id="round">1 piece=30/-</p>
+                    Qty  <input type="text" class="count" value="1" />
+                    <button class="tiny">Add to cart</button>
+                </div>
+                </div> 
+                <div></div>
+                <div class="data">
+                    <h1>SAND WICH</h1>
+                <div class="product medium-4 columns" data-name="chese sandwich" data-price="30" data-id="21">
+                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\chese sandwich.jpg" width="300" hegith="300" ;
+                alt="cheese sandwich " />
+                    <h3>Chese sandwich</h3>
+                    <p>cheese sandwitch is coated witha a mixture of cheese or cheese flavoured powders </p>
+                    <p id="round"> 1 piece=50/-</p>
+                    Qty  <input type="text" class="count" value="1" />
+                    <button class="tiny">Add to cart</button>
+                </div>
+                </div> 
+                <div class="data">
+                <div class="product medium-4 columns" data-name="chicken sandwich" data-price="100" data-id="22">
+                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\chicken sandwich.jpg" width="300" hegith="300" ;
+                alt="chicken sandwich " />
+                    <h3>Chicken sandwich</h3>
+                    <p>Chicken sandwich is a typically consists of boneless,skinless chicken breast or thigh served between slices of </p>
+                    <p id="round">1 piece=100/-</p>
+                    Qty  <input type="text" class="count" value="1" />
+                    <button class="tiny">Add to cart</button>
+                </div>
+                </div> 
+                <div class="data"> 
+                <div class="product medium-4 columns" data-name="club sandwich" data-price="40" data-id="23">
+                    <img src=" C:\Users\arava\OneDrive\Desktop\sree\img\club sandwich.jpg " width="300" hegith="300" ;
+                alt="club sandwich " />
+                    <h3>Club sandwich</h3>
+                    <p>Club sandwitch is consisting of bread,sliced cooked poultry,fried bacon and etc this is adelicious sandwitch</p>
+                    <p id="round">1 piece=40/-</p>
+                    Qty  <input type="text" class="count" value="1" />
+                    <button class="tiny">Add to cart</button>
+                </div> 
+            </div>
+            <div class="data">
+                <div class="product medium-4 columns" data-name="fried egg sandwich" data-price="40" data-id="24">
+                    <img src=" C:\Users\arava\OneDrive\Desktop\sree\img\fried edd sandwich.jpg " width="300" hegith="300" ;
+                alt="fried egg sandwich " />
+                    <h3>fried egg sandwich</h3>
+                    <p>Fried egg sandwitch is a kind of cooked egg filling,fried eggs,scrambled eggs and with sliced boiled eggs</p>
+                    <p id="round">1 piece=40/-</p>
+                    Qty   <input type="text" class="count" value="1" />
+                    <button class="tiny">Add to cart</button>
+                </div>  
+                </div>
+                <div class="data">
+                 <div class="product medium-4 columns" data-name="veg grilled sandwich" data-price="40" data-id="25">
+                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\veg grilled sandwich.jpg " width="300" hegith="300" ;
+                alt="veg grilled sandwich " />
+                    <h3>veg grilled sandwich</h3>
+                    <p>A grilled sandwitch is a hot sandwitch typically prepared by heating one or more slices of chesese between slices of bread</p>
+                    <p id="round">1 piece=40/-</p>
+                    Qty  <input type="text" class="count" value="1" />
+                    <button class="tiny">Add to cart</button>
+                </div>  
+                </div> 
+                <div class="data">
+                <div class="product medium-4 columns" data-name="vegtable sandwich" data-price="40" data-id="26">
+                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\vegtable sandwich.jpg " width="300" hegith="300" ;
+                alt="vegtable sandwich " />
+                    <h3>vegtable sandwich</h3>
+                    <p>Vegetable sandwitch is consisting of vegetable filling between bread and they are tottaly toasted</p>
+                    <p id="round">1 piece=40/-</p>
+                    Qty  <input type="text" class="count" value="1" />
+                    <button class="tiny">Add to cart</button>
+                </div>
+                </div> 
+                <div class="data">
+                    <h1>FRIES</h1>
+                    <div class="product medium-4 columns" data-name="apple fries" data-price="100" data-id="27">
+                        <img src="C:\Users\arava\OneDrive\Desktop\sree\img\apple fries.jpg" width="300" hegith="300" ;
+                    alt="apple fries " />
+                        <h3>apple fries</h3>
+                        <p>The best potato varieties for French fries are high in starch and low in moisture and create that wonderful texture that’s so needed for a perfect French fry. </p>
+                        <p id="round">1 plate=100/-</p>
+                        Qty  <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                    </div>
+                    </div> 
+                    
+                    <div class="data">
+                        <div class="product medium-4 columns" data-name="onion fries" data-price="100" data-id="28">
+                            <img src="C:\Users\arava\OneDrive\Desktop\sree\img\onion fries.webp" width="300" hegith="300" ;
+                        alt="onion fries " />
+                            <h3>onion fries</h3>
+                            <p>Fried onions are slices of onions that are either pan fried or deep fried — and consumed as a popular snack food, garnish, or vegetable accompaniment to various recipes.</p>
+                            <p id="round">1 plate=150/-</p>
+                            Qty  <input type="text" class="count" value="1" />
+                            <button class="tiny">Add to cart</button>
+                        </div>
+                        </div> 
+                        <div class="data">
+                            <div class="product medium-4 columns" data-name="potato fries" data-price="80" data-id="29">
+                                <img src="C:\Users\arava\OneDrive\Desktop\sree\img\salt french fries.jpeg" width="300" hegith="300" ;
+                            alt="potato fries " />
+                                <h3>potato fries</h3>
+                                <p>Chips or french fries, long chunks of potato that have been deep fried or baked; Chips, or crisps, a snack food in the form of thin crispy slices.</p>
+                                <p id="round">1 plate=80/-</p>
+                                Qty  <input type="text" class="count" value="1" />
+                                <button class="tiny">Add to cart</button>
+                            </div>
+                            </div> 
+                            <div class="data">
+                                <div class="product medium-4 columns" data-name="potato fries" data-price="150" data-id="30">
+                                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\taro-fry.jpg" width="300" hegith="300" ;
+                                alt="taro fries " />
+                                    <h3>taro fries</h3>
+                                    <p>taro fries, long chunks of  that have been deep fried or baked; Chips, or crisps, a snack food in the form of thin crispy slices.</p>
+                                    <p id="round">1 plate=80/-</p>
+                                    Qty  <input type="text" class="count" value="1" />
+                                    <button class="tiny">Add to cart</button>
+                                </div>
+                                </div>
+                                <div class="data">
+                                    <h1>BURGERS</h1>
+                                    <div class="product medium-4 columns" data-name="img\olive burger" data-price="120" data-id="31">
+                                        <img src="C:\Users\arava\OneDrive\Desktop\sree\img\olive burger.jpg" width="300" hegith="300" ;
+                                    alt="img\olive burger " />
+                                        <h3>img\olive burger</h3>
+                                        <p>Olive burger is an American burger variety originating from Michigan. It’s made with a combination of ground beef, oil, white buns, mayonnaise, and pitted green olives. In order to prepare it, the meat patties are fried, topped with a mixture of olives and mayonnaise, then placed in a burger bun with no other condiments.</p>
+                                        <p id="round">1 piece=120/-</p>
+                                        Qty  <input type="text" class="count" value="1" />
+                                        <button class="tiny">Add to cart</button>
+                                    </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="product medium-4 columns" data-name="green chile cheese burger" data-price="70" data-id="32">
+                                            <img src="C:\Users\arava\OneDrive\Desktop\sree\img\green chile cheese burger.jpg" width="300" hegith="300" ;
+                                        alt="green chile cheese burger " />
+                                            <h3>green chile cheese burger</h3>
+                                            <p>Green chile cheeseburger is New Mexico’s variation of the classic burger, made with green New Mexico chile-topped beef patty inside a burger bun. A slice of melted American cheese on top of the patty is mandatory. The dish has been popular at least since the 1950s, and nowadays it is practically a symbol of New Mexico.
+ This cheeseburger typically also contains other toppings such as onions and lettuce..</p>
+                                            <p id="round">1 pliece=80/-</p>
+                                            Qty  <input type="text" class="count" value="1" />
+                                            <button class="tiny">Add to cart</button>
+                                        </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="product medium-4 columns" data-name="slaw burger" data-price="150" data-id="33">
+                                                <img src="C:\Users\arava\OneDrive\Desktop\sree\img\slaw burger.jpg " />
+                                                <h3>slaw burger</h3>
+                                                <p>Slaw burger is a traditional American type of burger that's common in the southern parts of the United States. It's essentially a classic burger topped with coleslaw. In most cases, the burger consists of a meat patty that's topped with sliced tomatoes, sliced onions, and coleslaw dressing.</p>
+                                                <p id="round">1 piece=80/-</p>
+                                                Qty  <input type="text" class="count" value="1" />
+                                                <button class="tiny">Add to cart</button>
+                                            </div>
+                                            </div>
+                                            <div class="data">
+                                                <div class="product medium-4 columns" data-name="theta burger" data-price="200" data-id="34">
+                                                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\theta burger.jpg" />
+                                                    <h3>theta burger</h3>
+                                                    <p>Theta burger is the name of an Oklahoma specialty consisting of a bread bun and a meat patty that is topped with hickory sauce, mayonnaise, slices of dill pickles, and shredded cheddar cheese. </p>
+                                                    <p id="round">1 piece=200/-</p>
+                                                    Qty  <input type="text" class="count" value="1" />
+                                                    <button class="tiny">Add to cart</button>
+                                                </div>
+                                                </div>
+                                                <div class="data">
+                                                    <div class="product medium-4 columns" data-name="poachedburger" data-price="200" data-id="35">
+                                                        <img src="C:\Users\arava\OneDrive\Desktop\sree\img\poached burger.jpg" />
+                                                        <h3>poached burger</h3>
+                                                        <p>The water pan in which the meat cooks is filled with sliced onions that flavor the liquid and the patties. Once done, the meat is placed into a bakery roll with a scoop of the onions, and the burgers are usually finished with a squirt of horseradish mustard.  </p>
+                                                        <p id="round">1 piece=200/-</p>
+                                                        Qty  <input type="text" class="count" value="1" />
+                                                        <button class="tiny">Add to cart</button>
+                                                    </div>
+                                                    </div>
+                                                    <div></div>
+                                                    <div class="data">
+                                                        <h1>MILK SHAKES</h1>
+                                                        <div class="product medium-4 columns" data-name="banana-milkshake" data-price="40" data-id="36">
+                                                            <img src="C:\Users\arava\OneDrive\Desktop\sree\img\banana-milkshake-1.jpg" />
+                                                            <h3>banana-milkshake</h3>
+                                                            <p>This milkshake is good for your health as it is packed with proteins. To begin with, take one glass of milk (cold) and pour it into the mixer. Cut thin round slices of banana and put in the blender. Add one tsp sugar and cardamom powder to it. Give it a mix. Make sure that the mixture blends properly. Pour it in a glass and enjoy! You can garnish it with banana slices, whipped or fresh cream, and some chocolate powder.  </p>
+                                                            <p id="round">1 shake=40/-</p>
+                                                            Qty  <input type="text" class="count" value="1" />
+                                                            <button class="tiny">Add to cart</button>
+                                                        </div>
+                                                    </div>
+            <div class="data">
+            <div class="product medium-4 columns" data-name="vanilla-milkshake" data-price="60" data-id="37">
+                <img src="C:\Users\arava\OneDrive\Desktop\sree\img\vanilla-2.png"/>
+                <h3>vanilla-milkshake</h3>
+                <p>Vanilla milkshake is the best kind of a shake you would want to drink in the summers. It will refresh you and help you to beat the heat. You will need one or two scoops of vanilla ice-cream. Pour one glass of cold milk into the mixer. Add one or two scoops of vanilla ice-cream and a pinch of salt into it. Mix it well. And your milkshake is ready! If you want you can add some cut almonds as well. Or you can opt for your favorite dry fruit.
+                </p>
+                <p id="round">1 shake=60/-</p>
+                Qty  <input type="text" class="count" value="1" />
+                <button class="tiny">Add to cart</button>
+            </div>
+            </div>
+            <div class="data">
+            <div class="product medium-4 columns" data-name="mango-milkshake" data-price="60" data-id="38">
+                <img src="C:\Users\arava\OneDrive\Desktop\sree\img\mango-milk.jpg"/>
+                <h3>mango-milkshake</h3>
+                <p>Mango; the fruit which we all love. For all the mango lovers, this milkshake is love. First of all, dice one or two mangoes. Pour one glass of cold milk into the mixer. Add the diced mangoes to it. Mix it. Then add one tsp (or more) sugar to it. You can add a bit of cardamom powder if you wish. Mix again. You can top it off with some chocolate shavings or dry fruits powder. If you have some mango ice cream with you, you can add one or two scoops of it on the milkshake as a topping.
+                </p>
+                <p id="round">1 shake=60/-</p>
+                Qty  <input type="text" class="count" value="1" />
+                <button class="tiny">Add to cart</button>
+            </div>
+            </div>
+            <div class="data">
+                <div class="product medium-4 columns" data-name="banana-khajur-milkshake" data-price="60" data-id="38">
+                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\banana-khajur.jpg"/>
+                    <h3>banana-khajur-milkshake</h3>
+                    <p>This one tastes yummy and is full of protein. Banana and dates give you a lot of energy. This shake should be ideally consumed in the morning. To begin with, take one glass of cold milk and pour it into the mixer. Cut thin round slices of banana and put in it. Add seedless dates to it. They should be soaked in water before and cut into small pieces. Add one tsp sugar and cardamom powder to it. Give it a mix. Pour it in a glass and enjoy!
+                    </p>
+                    <p id="round">1 shake=60/-</p>
+                    Qty  <input type="text" class="count" value="1" />
+                    <button class="tiny">Add to cart</button>
+                </div>
+                </div>
+                <div class="data">
+                    <div class="product medium-4 columns" data-name="chocolate-banana-milkshake" data-price="60" data-id="39">
+                        <img src="C:\Users\arava\OneDrive\Desktop\sree\img\chocolate-banana.jpg"/>
+                        <h3>chocolate-banana-milkshake</h3>
+                        <p>The combination of chocolate and banana is loved almost by all. A tried and tested combo which never fails to delight us. To begin with, take one glass of milk (cold) and pour it into the mixer. Cut thin round slices of banana and put in it. Add one tsp sugar and cardamom powder to it. Give it a mix. Then add some chocolate syrup or one scoop of chocolate ice cream to it. Blend it properly. Transfer the shake in a glass. Top it off with choco chips and three or four slices of banana.
+                        </p>
+                        <p id="round">1 shake=60/-</p>
+                        Qty  <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                    </div>
+                    </div>
+                    <div class="data">
+                        <div class="product medium-4 columns" data-name="chocolate-milkshake" data-price="60" data-id="40">
+                            <img src="C:\Users\arava\OneDrive\Desktop\sree\img\chocolate-11.jpg"/>
+                            <h3>chocolate-milkshake</h3>
+                            <p>We all love chocolates, and what’s best is to have it as a shake. You will need dark chocolate for this. You can opt for chocolate syrup or any other chocolate if you do not have the dark chocolate. In a mixer, pour one glass of cold milk. Boil some water in a vessel. Take the dark chocolate in a glass bowl and keep it in this hot water for the chocolate to melt. Once the chocolate melts, put it in the milk. Add two or three ice cubes. Mix well. You can also opt for chocolate ice cream instead of chocolate syrup, for making this milkshake.
+                            </p>
+                            <p id="round">1 shake=60/-</p>
+                            Qty  <input type="text" class="count" value="1" />
+                            <button class="tiny">Add to cart</button>
+                        </div>
+                        </div>
+                        <div class="data">
+                            <div class="product medium-4 columns" data-name="cookies-cream-milkshake" data-price="60" data-id="41">
+                                <img src="C:\Users\arava\OneDrive\Desktop\sree\img\cookies-cream.jpg"/>
+                                <h3>cookies-cream</h3>
+                                <p>Yes this shake contains calories, but sometimes it’s OK to indulge into such things. To start with, soak one cup of chocolate wafer cookies in half cup of milk so that it becomes soft. Scoop vanilla ice cream and add to it. Blend it. Transfer the shake in a glass and top it off with a cookie or choco chips. If you love oreo, you could use those biscuits instead of any other cookie.
+                                </p>
+                                <p id="round">1 shake=60/-</p>
+                                Qty  <input type="text" class="count" value="1" />
+                                <button class="tiny">Add to cart</button>
+                            </div>
+                            </div>
+                                <div class="data">
+                                    <div class="product medium-4 columns" data-name="strawberry-milkshake" data-price="60" data-id="42">
+                                        <img src="C:\Users\arava\OneDrive\Desktop\sree\img\strawberry-3.png"/>
+                                        <h3>strawberry-milkshake</h3>
+                                        <p>Blend one scoop of chocolate ice cream and one scoop of strawberry ice cream. Add a half cup of chopped strawberries to it. Blend again. Then add one to two tsp of chocolate syrup to it. Blend well. Add some milk if the mixture seems too thick to you. Pour the shake in a glass. Top it off with some chocolate shavings or strawberries.
+                                        </p>
+                                        <p id="round">1 shake=60/-</p>
+                                        Qty  <input type="text" class="count" value="1" />
+                                        <button class="tiny">Add to cart</button>
+                                    </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="product medium-4 columns" data-name="butterscoth-milkshake" data-price="60" data-id="43">
+                                            <img src="C:\Users\arava\OneDrive\Desktop\sree\img\butterscoth.jpg"/>
+                                            <h3>butterscoth-milkshake</h3>
+                                            <p>Blend one scoop of butterscotch ice cream and a half cup of milk. Add some sugar if required. Transfer the shake in a glass. Top it off with some fresh cream. Quick and easy? Isn’t it? This milkshake is delicious and also easy to make. Won’t take you much time to prepare this one.
+                                            </p>
+                                            <p id="round">1 shake=60/-</p>
+                                            Qty  <input type="text" class="count" value="1" />
+                                            <button class="tiny">Add to cart</button>
+                                        </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="product medium-4 columns" data-name="cherry-vanilla-milkshake" data-price="60" data-id="44">
+                                                <img src="C:\Users\arava\OneDrive\Desktop\sree\img\cherry-vanilla.jpg"/>
+                                                <h3>cherry-vanilla-milkshake</h3>
+                                                <p>This one’s a simple and subtle milkshake. Take vanilla ice cream (one or two scoops), cut the cherries, one cup of milk, and sugar (as per taste). Blend all of these. Transfer the shake in a glass and top it off with some cherries and whipped cream.
+                                                </p>
+                                                <p id="round">1 shake=60/-</p>
+                                                Qty  <input type="text" class="count" value="1" />
+                                                <button class="tiny">Add to cart</button>
+                                            </div>
+                                            </div>
+                                            <div class="data">
+                                                <h1>SWEETS</h1>
+                                                <div class="product medium-4 columns" data-name="kaju-katli" data-price="20" data-id="45">
+                                                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\kaju-katli.jpg"/>
+                                                    <h3>kaju-katli</h3>
+                                                    <p id="round">1 piece =20/-</p>
+                                                    Qty  <input type="text" class="count" value="1" />
+                                                    <button class="tiny">Add to cart</button>
+                                                </div>
+                                                </div>
+                                                <div class="data">
+                                                    <div class="product medium-4 columns" data-name="gulab_Jamun" data-price="10" data-id="46">
+                                                        <img src="C:\Users\arava\OneDrive\Desktop\sree\img\gulab_Jamun.jpg"/>
+                                                        <h3>gulab_Jamun</h3>
+                                                        <p id="round">1 piece=10/-</p>
+                                                        Qty  <input type="text" class="count" value="1" />
+                                                        <button class="tiny">Add to cart</button>
+                                                    </div>
+                                                    </div>
+                                                    <div class="data">
+                                                        <div class="product medium-4 columns" data-name="laddoo" data-price="10" data-id="47">
+                                                            <img src="C:\Users\arava\OneDrive\Desktop\sree\img\laddoo.jpg"/>
+                                                            <h3>gulab_Jamun</h3>
+                                                            <p id="round">1 piece=8/-</p>
+                                                            Qty  <input type="text" class="count" value="1" />
+                                                            <button class="tiny">Add to cart</button>
+                                                        </div>
+                                                        </div>
+                                                        <div class="data">
+                                                            <div class="product medium-4 columns" data-name="jalebi" data-price="10" data-id="48">
+                                                                <img src="C:\Users\arava\OneDrive\Desktop\sree\img\jalebi-2.jpg"/>
+                                                                <h3>jalebi</h3>
+                                                                <p id="round">1 piece=5/-</p>
+                                                                Qty  <input type="text" class="count" value="1" />
+                                                                <button class="tiny">Add to cart</button>
+                                                            </div>
+                                                            </div>
+                                                            <div class="data">
+                                                                <div class="product medium-4 columns" data-name="kheer" data-price="10" data-id="49">
+                                                                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\kheer-3.jpg"/>
+                                                                    <h3>kheer</h3>
+                                                                    <p id="round">1 piece=20/-</p>
+                                                                    Qty  <input type="text" class="count" value="1" />
+                                                                    <button class="tiny">Add to cart</button>
+                                                                </div>
+                                                                </div>
+                                                                <div class="data">
+                                                                    <div class="product medium-4 columns" data-name="rasgulla" data-price="10" data-id="50">
+                                                                        <img src="C:\Users\arava\OneDrive\Desktop\sree\img\rasgulla.jpg"/>
+                                                                        <h3>rasgulla</h3>
+                                                                        <p id="round">1 piece=20/-</p>
+                                                                        Qty  <input type="text" class="count" value="1" />
+                                                                        <button class="tiny">Add to cart</button>
+                                                                    </div>
+                                                                    </div>
+                                                                    <div class="data">
+                                                                        <div class="product medium-4 columns" data-name="barfi" data-price="10" data-id="51">
+                                                                            <img src="C:\Users\arava\OneDrive\Desktop\sree\img\barfi.jpg"/>
+                                                                            <h3>barfi</h3>
+                                                                            <p id="round">1 piece=10/-</p>
+                                                                            Qty  <input type="text" class="count" value="1" />
+                                                                            <button class="tiny">Add to cart</button>
+                                                                        </div>
+                                                                        </div>
+                                                                        <div class="data">
+                                                                            <div class="product medium-4 columns" data-name="barfi" data-price="10" data-id="52">
+                                                                                <img src="C:\Users\arava\OneDrive\Desktop\sree\img\mysore-pak.jpg"/>
+                                                                                <h3>barfi</h3>
+                                                                                <p id="round">1 piece=10/-</p>
+                                                                                Qty  <input type="text" class="count" value="1" />
+                                                                                <button class="tiny">Add to cart</button>
+                                                                            </div>
+                                                                            </div>
+                                                                            <div class="data">
+                                                                                <div class="product medium-4 columns" data-name="pootharekulu" data-price="10" data-id="53">
+                                                                                    <img src="C:\Users\arava\OneDrive\Desktop\sree\img\pootharekulu.jpg"/>
+                                                                                    <h3>pootharekulu</h3>
+                                                                                    <p id="round">1 piece=20/-</p>
+                                                                                    Qty  <input type="text" class="count" value="1" />
+                                                                                    <button class="tiny">Add to cart</button>
+                                                                                </div>
+                                                                                </div>
+                                                    
+                                                
+                                            
+                                               
+            </div> 
+            </div>
+        </div>    
+    <script type="text/template" id="cartT">
+      <% _.each(items, function (item) { %> <div class = "panel"> <h3> <%= item.name %> </h3>  <span class="label">
+    <%= item.count %> piece<% if(item.count > 1)
+    {%>s
+    <%}%> for <%= item.total %>$</span >
+ </div>
+    <% }); %>
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js'></script>
+    <script  src="./js/script.js"></script>
+<script src="search.js"></script>
+    </body>
+</html>

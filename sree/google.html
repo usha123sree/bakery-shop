@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login to bakery shop</title>
+    <style>
+     body{
+    background-color: antiquewhite;
+     }
+    </style>
+</head>
+<body align="center">
+    <form method="post" action="https://script.google.com/macros/s/AKfycbyaJSRJu0Ia8bOwDovUuWKRVubc7diLntCesxtJyMCCsHTVNVNr7iXxsIwT9KJKPjFe/exec">
+        <h2>Login form</h2>
+        <form action=""autocomplete="off">
+          <div class="grid-details">
+            <div class="input">
+                 <label>Email</label>
+                 <input type="email"name="email" placeholder="Enter your Email"required align="center">
+               </div>
+               <div class="input">
+                 <label>Password</label>
+                 <input type="password"name="pass" placeholder="Password"required>
+               </div>
+               <div class="submit"onclick="myFunction()">
+                <input type="submit" value="Login" class="button" align="center">
+            </div>
+        </form>
+    <p> or</p>
+    <button onclick="signIn()">Sign In With Google</button>
+</body>
+<script>
+    var form = document.getElementById('sheetdb-form');
+form.addEventListener("login", e => {
+  e.preventDefault();
+  fetch(form.action, {
+      method : "POST",
+      body: new FormData(document.getElementById("sheetdb-form")),
+  }).then(
+      response => response.json()
+  ).then((html) => {
+    // you can put any JS code here
+    window.open("order.html", '_blank');
+
+  });
+});
+</script>
+<script src="google.js"></script>
+</html>

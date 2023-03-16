@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Robot";
+}
+body{
+    position: relative;
+    background: #ff7300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+::selection{
+    color: azure;
+    background: #f26b05 ;
+}
+.form{
+    position: relative;
+    background: aliceblue;
+    width: 150%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: -3px 3px 10px -5px rgba(0,0.0,0.2);
+    padding: 30px,30px;
+}
+.form h2{
+    font-size: 30px;
+    font-weight: 700;
+
+}
+.form p{
+    font-size: 14px;
+    padding-bottom: 8px;
+}
+.form form{
+    margin: 8px;
+}
+
+.form form .grid-details{
+    display: grid;
+    padding: 20px;
+    width: 210px;
+    height: 265px;
+}
+.form form input input{
+    height: 40px;
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+}
+.form form .input input:focus
+.form form .input input:valid{
+    border: 2px solid #ff8c00;
+    transition: 0.1s ease;
+    outline: none;
+}
+.form form .button{
+    height: 20px;
+    border: none;
+    color: #f2f3f7;
+    background: #006692;
+    width: 100%;
+}
+.form .link{
+    text-align: center;
+    margin: 10px 0;
+    font-size: 17px;
+}
+.form .link a{
+    color: #006692;
+    transition: 0.5s all;
+}
+.form .link a:hover{
+    text-decoration: underline;
+}

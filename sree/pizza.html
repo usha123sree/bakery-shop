@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible"content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>bakery shop</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+        <style>
+            img{
+                width: 300px;
+                height: 300px;
+            }
+           
+            .data{
+        max-width: 600px;
+        margin:auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:2rem;
+    }
+    .products{
+        width:100%;
+        height:30%;
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap:40px;
+    }
+    .product{
+     width: 350px;
+     height:90%;
+     box-shadow: 0 5px 20px rgba(30, 6, 160, 0.3);
+     display: flex;
+     flex-direction:column;
+     justify-content:center;
+     padding: 10px 20px 30px;
+     border-radius: 10px;
+     transition: .3s;
+
+    }
+    button{
+       
+        background-color: rgb(115, 233, 11);
+    }
+    button:hover{
+       
+       background-color: rgb(20, 206, 200);
+   }
+   .cart{
+    padding-top:5%;
+    position: fixed;
+    padding-bottom: 50px;
+    display:inline-block;
+   justify-content: end;
+        gap:40px;
+   
+   }
+   medium-8  .button{
+    border-radius: 25px;
+    border: 2px ;
+    padding: 10px;
+    position: fixed;
+    }
+ </style>
+    
+    </head>
+    <body>
+        <div class="medium-4  columns">
+            <div class="cart">
+                <h1>Cart items</h1>
+                <div class="row">
+                    <div class="medium-6 columns">
+                        <button class="tiny secondary" id="clear">Clear the cart</button>
+                    </div>
+                    <div class="medium-6 columns">
+                        <button class="tiny disabled" title="Work in progress"><a href="C:\Users\arava\OneDrive\Desktop\sree\checkout.html">Checkout</a></button>
+                    </div>
+                </div>
+                <div id="cartItems"><a href="">Loading cart...</a></div>
+                Total price: <strong id="totalPrice">0 $</strong>
+            </div>
+          
+        </div>
+        <div class="medium-8 columns">
+            <h1 align="center">Bakery items</h1>
+            <div class="products">
+        <div class="products">
+            <div class="image">
+                <div class="data">
+                    <div class="product medium-4 columns" data-name="tomato pizza" data-price="200" data-id="9">
+                        <img src="C:\Users\arava\OneDrive\Desktop\sree\img\creamy tomato pizza.jpg" width="300" hegith="300" 
+                    alt="tomato pizza" />
+                        <h3>Tomato pizza</h3>
+                        <p>This pizza top with tomato sauce will provide you many essential nutrients</p>
+                        <p>200/-</p>
+                        <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                        
+                    </div>
+                    <div class="product medium-4 columns" data-name="double cheese pizza" data-price="350" data-id="10">
+                        <img src="C:\Users\arava\OneDrive\Desktop\sree\img\double cheese.jpg"width="300" hegith="300"   alt="double cheese pizza" />
+                        <h3>double cheese pizza</h3>
+                        <p>This pizza is a basic meal with just tomato sauce topped with cheese</p>
+                        <p>350/-</p>
+                        <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                    </div>
+                    <div class="product medium-4 columns" data-name="onion pizza" data-price="150" data-id="11">
+                        <img src="C:\Users\arava\OneDrive\Desktop\sree\img\pyaza.jpg" width="300" hegith="300" ;
+                    alt="onion pizza" />
+                        <h3>onion pizaa</picture></h3>
+                        <p>This pizza is a basic meal with just tomato sauce topped with cheese and onions</p>
+                        <p>150/-</p>
+                        <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                       
+                    </div>
+                    <div class="product medium-4 columns" data-name="grill" data-price="190" data-id="12">
+                        <img src="C:\Users\arava\OneDrive\Desktop\sree\img\grill.jpeg" width="300" hegith="300" ;
+                    alt="grill" />
+                        <h3>veg grill</h3>
+                        <p>The veg grill  spread pizza crust with garlic and sprinkle </p>
+                        <p>190/-</p>
+                        <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                       
+                    </div>
+                    <div class="product medium-4 columns" data-name="indi tandoori paneer pizza" data-price="350" data-id="13">
+                        <img src="C:\Users\arava\OneDrive\Desktop\sree\img\indi tandoori paneer pizza.jpg" width="300" hegith="300" ;
+                    alt="indi tandoori paneer pizza" />
+                        <h3> indiTandoori paneer pizza</h3>
+                        <P>indiTandoori paneer pizza & peppy panner combo,capsicum</P>
+                        <p>350/-</p>
+                        <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                       
+                    </div>
+                    <div class="product medium-4 columns" data-name="Italian veg pizza" data-price="380" data-id="14">
+                        <img src="C:\Users\arava\OneDrive\Desktop\sree\img\Italian veg pizza.jpeg" width="300" hegith="300" ;
+                    alt="Italian veg pizza" />
+                        <h3>italian veg pizza</h3>
+                        <p>Spread pizza sauce over hot crust.Top with cooked vegetables, mushrooms and olives</p>
+                        <p>380/-</p>
+                        <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+    
+                    </div>
+                    <div class="product medium-4 columns" data-name="spcl Tromandous pizza" data-price="380" data-id="15">
+                        <img src="C:\Users\arava\OneDrive\Desktop\sree\img\spcl Tromandous pizza.jpeg" width="300" hegith="300" ;
+                    alt="spcl Tromandousn veg pizza" />
+                        <h3>spcl Tromandousn veg pizza</h3>
+                        <p> the special Tromandousn veg pizza is made with top tamato sauce, onions,vegetables and spicy </p>
+                        <p>380/-</p>
+                        <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button> 
+                    </div>
+                </div> 
+            </div>
+        </div>    
+    <script type="text/template" id="cartT">
+      <% _.each(items, function (item) { %> <div class = "panel"> <h3> <%= item.name %> </h3>  <span class="label">
+    <%= item.count %> piece<% if(item.count > 1)
+    {%>s
+    <%}%> for <%= item.total %>$</span >
+ </div>
+    <% }); %>
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js'></script>
+    <script  src="./js/script.js"></script>
+
+    </body>
+</html>
